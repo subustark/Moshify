@@ -5,6 +5,8 @@
   --color-headings: #1b0760;
   --color-bodyText: #918ca4;
 }
+
+/* Typography */
 body {
   font-family: inter, Arial, Helvetica, sans-serif;
   font-size: 2.4rem;
@@ -41,5 +43,31 @@ p {
   }
   h3 {
     font-size: 2.4rem;
+  }
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+}
+.link-Arrow {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.link-Arrow::after {
+  content: "-->";
+  margin-left: 0.3rem;
+  transition: margin 0.15s;
+}
+.link-Arrow:hover::after {
+  margin-left: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .link-Arrow {
+    font-size: 1.5rem;
   }
 }
